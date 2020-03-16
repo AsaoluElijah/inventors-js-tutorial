@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="browser.html">click me</a>
+    <input type="text" id="chat" placeholder="Start a chat">
+    <br><br>
+    <button onclick="func();">Send</button>
+
+    <script>
+        function func() {
+            var ans = document.getElementById("chat").value;
+            if (ans == "hi") {
+                alert("hello");
+            } else if (ans == "how are you") {
+                alert("I'm fine thank you.")
+            }
+        }
+    </script>
+</body>
+
+</html>
