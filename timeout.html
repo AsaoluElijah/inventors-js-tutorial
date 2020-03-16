@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Timeout
+        var timeoutId = setTimeout(() => {
+            alert("Welcome");
+        }, 5000);
+        // 1000 milliseconds =  1 sec
+        clearTimeout(timeoutId)
+
+        // Interval
+        var intervalId = setInterval(() => {
+                alert("Welcome");
+            }, 5000)
+            // to clear the interval
+        clearInterval(intervalId);
+    </script>
+</body>
+
+</html>
