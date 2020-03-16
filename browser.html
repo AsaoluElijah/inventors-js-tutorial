@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="test.html">go to test page</a>
+            <button onclick="history.back();">🔙</button>
+            <button onclick="window.history.forward();">⏩</button>
+            <button onclick="window.location.reload();">🔄</button>
+            <input type="text" name="" id="search" placeholder="Search Inventoole or type url" style="width: 600px;padding: 10px;">
+            <button type="button" onclick="search()">Search 🔍</button>
+            <br><br>
+            <center>
+                <iframe id="frame" src="guess-game.html" frameborder="0" style="width: 900px;height: 500px;"></iframe>
+            </center>
+        </div>
+    </div>
+    <script>
+        function search() {
+            var sT = document.getElementById("search").value;
+            if (sT == '') {
+                alert("Enter Something");
+            } else {
+                var url = "https://google.com/search?q=" + sT;
+                // document.getElementById("frame").src = url;
+                location.href = url;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
