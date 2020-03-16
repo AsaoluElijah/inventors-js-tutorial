@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="history.forward();">Forward</button>
+    <a href="browser.html">click me</a>
+    <img src="img.jpg" draggable="true" alt="Image" width="200" height="200" id="image">
+    <button onclick="changePic()">Change Image</button>
+    <script>
+        var name = "asaolu";
+
+        function changePic() {
+            var image = document.getElementById("image");
+            image.src = "aaa.png";
+        }
+    </script>
+</body>
+
+</html>
