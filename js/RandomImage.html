@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" class="input" placeholder="Input Image Category">
+    <button type="button" id="button" onclick="search()">Search</button>
+    <img src="http://lorempixel.com/400/200/sport" alt="My Image" id="img">
+
+    <script>
+        // var url = "lorempixel.com/400/200/";
+
+        function search() {
+            var category = document.querySelector(".input").value;
+            var url = `http://lorempixel.com/400/200/${category}`;
+            fetch(encodeURI(url))
+                .then(function(data) {
+                    return data.text();
+                })
+                .then(function(response) {
+                    // document.getElementById("img").src = response
+                    console.log(response);
+                })
+
+        }
+        // function search() {
+        //     fetch(url)
+        //         .then(function(data) {
+        //             return data.json();
+        //         })
+        //         .then(function(data) {
+        //             document.getElementById("button").value = data.content;
+        //         })
+        // };
+    </script>
+</body>
+
+</html>
